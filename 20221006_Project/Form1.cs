@@ -26,7 +26,16 @@ namespace _20221006_Project
         {
             Form_Game jatek = new Form_Game();
             jatek.ShowDialog(this);
-            this.Close();
+            this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                form.Hide();
+            }
+            this.Close();
+        }        
     }
 }
