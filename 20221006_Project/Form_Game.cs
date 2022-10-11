@@ -22,7 +22,8 @@ namespace _20221006_Project
             this.AutoSize = true;
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             this.WindowState = FormWindowState.Maximized;
-            pictureBox1.Image = Properties.Resources.FighterJet;
+            SajatGep.Visible = false;
+            SajatGep.Image = Properties.Resources.FighterJet;
             button1.Location = new Point(Form_Game.ActiveForm.Size.Width/2-button1.Width/2, Form_Game.ActiveForm.Size.Height/2-button1.Height/2);
         }
 
@@ -31,6 +32,11 @@ namespace _20221006_Project
             Form1 main = new Form1();
             main.ShowDialog(this);
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SajatGep.Visible = true;
         }
     }
 }
